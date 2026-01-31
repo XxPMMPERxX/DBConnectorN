@@ -16,7 +16,7 @@ object Database {
      *
      * @return transactionスコープ外ではnullしか返ってこない
      */
-    fun getConnection(): Connection? = null
+    fun getConnection(): Connection? = conn
 
     inline fun <T> transaction(statement: () -> T): T {
         try {
