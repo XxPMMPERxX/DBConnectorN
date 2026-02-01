@@ -1,5 +1,17 @@
 # DBConnectorN
 ## 使い方
+プラグインを入れます。
+### plugin.yml
+dependを書いてください
+```
+name: SamplePlugin
+version: 1.0.0
+～～～～（略）～～～～
+depend:
+  - DBConnectorN
+```
+
+### ソースコード
 transactionスコープ内で例外が発生したらロールバックします(多分)
 ```kotlin
 import jp.asteria.dbconnector.Database
