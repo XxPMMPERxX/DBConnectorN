@@ -40,7 +40,7 @@ import jp.asteria.dbconnector.Database.transaction
 transaction {
     val type = Database.type // enumを取得できる 今のところは SQLITE,MYSQL の2種類
 
-    val connection = Database.getConnection() ?:throw SQLException() // java.sql.Connection
+    val connection = Database.getTransactionConnection() ?: throw SQLException() // java.sql.Connection
     // あとはいつも通りPreparedStatementとか
 }
 
