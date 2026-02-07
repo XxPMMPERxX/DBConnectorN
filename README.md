@@ -36,6 +36,7 @@ transactionスコープ内で例外が発生したらロールバックします
 import jp.asteria.dbconnector.Database
 import jp.asteria.dbconnector.Database.transaction
 
+// 直でSQL書く場合
 transaction {
     val type = Database.type // enumを取得できる 今のところは SQLITE,MYSQL の2種類
 
@@ -43,4 +44,6 @@ transaction {
     // あとはいつも通りPreparedStatementとか
 }
 
+// Exposedとかで使う用でDataSource取得
+val ds = Database.getDataSource()
 ```
